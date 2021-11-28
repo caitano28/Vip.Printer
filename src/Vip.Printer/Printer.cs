@@ -84,6 +84,12 @@ namespace Vip.Printer
                 case PrinterType.Daruma:
                     _command = new EscDaruma();
                     break;
+                case PrinterType.Tanca:
+                    _command = new EscPos();
+                    break;
+                case PrinterType.JetWay:
+                    _command = new EscPos();
+                    break;
             }
 
             #endregion
@@ -262,6 +268,11 @@ namespace Vip.Printer
             WriteLine("Largura normal");
             Separator();
 
+            DoubleHeight();
+            WriteLine("Altura de Fonte 2");
+            NormalHeight();
+            WriteLine("Altura normal");
+
             AlignRight();
             WriteLine("Texto alinhado à direita");
             AlignCenter();
@@ -343,6 +354,29 @@ namespace Vip.Printer
         public void DoubleWidth3()
         {
             Write(_command.FontWidth.DoubleWidth3());
+        }
+
+        #endregion
+
+        #region FontHeight
+        public void NormalHeight()
+        {
+            Write (_command.FontHeight.Normal());
+        }
+        public void DoubleHeight()
+        {
+            Write(_command.FontHeight.DoubleHeight());
+        }
+        #endregion
+
+        #region FontEmphasized
+        public void FontDefault()
+        {
+            Write(_command.FontEmphasized.EmphasizedOff());
+        }
+        public void Emphasized()
+        {
+            Write(_command.FontEmphasized.Emphasized());
         }
 
         #endregion

@@ -11,6 +11,8 @@ namespace Vip.Printer.EscBemaCommands
 
         public IFontMode FontMode { get; set; }
         public IFontWidth FontWidth { get; set; }
+        public IFontHeight FontHeight { get; set; }
+        public IFontEmphasized FontEmphasized { get; set; }
         public IAlignment Alignment { get; set; }
         public IPaperCut PaperCut { get; set; }
         public IDrawer Drawer { get; set; }
@@ -30,6 +32,8 @@ namespace Vip.Printer.EscBemaCommands
         {
             FontMode = new FontMode();
             FontWidth = new FontWidth();
+            FontHeight = new FontHeight();
+            FontEmphasized = new FontEmphasized();
             Alignment = new Alignment();
             PaperCut = new PaperCut();
             Drawer = new Drawer();

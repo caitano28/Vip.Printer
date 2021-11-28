@@ -39,6 +39,7 @@ namespace Vip.Printer.Interfaces.Printer
         void ExpandedMode(PrinterModeState state);
         void CondensedMode(string value);
         void CondensedMode(PrinterModeState state);
+     
 
         #endregion
 
@@ -48,6 +49,15 @@ namespace Vip.Printer.Interfaces.Printer
         void DoubleWidth2();
         void DoubleWidth3();
 
+        #endregion
+        #region FontEmphasized
+        void FontDefault();
+        void Emphasized();
+        #endregion
+
+        #region FontHeight
+        void NormalHeight();
+        void DoubleHeight();
         #endregion
 
         #region Alignment
